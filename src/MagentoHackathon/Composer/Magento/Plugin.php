@@ -320,7 +320,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
 return '$vendorDirPath';
 
 AUTOLOAD;
-        $this->filesystem->ensureDirectoryExists($vendorPathFile);
+        $this->filesystem->ensureDirectoryExists($magentoDir . '/app/etc/');
         file_put_contents($vendorPathFile, $content);
     }
 
