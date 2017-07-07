@@ -320,6 +320,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
 return '$vendorDirPath';
 
 AUTOLOAD;
+        $this->filesystem->ensureDirectoryExists($vendorPathFile);
         file_put_contents($vendorPathFile, $content);
     }
 
